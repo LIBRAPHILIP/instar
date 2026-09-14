@@ -55,4 +55,6 @@ Instar is a self-molting nervous system for other contracts: anyone who proves a
 
 ## Live pointers
 
-Filled after hatch / `npm run deploy:*` in `src/deployed.json`.
+- App: https://instar-lifeform.vercel.app
+- Repo: https://github.com/LIBRAPHILIP/instar
+- Hatch from the UI (Studionet). Addresses land in `src/deployed.json` after `npm run deploy:*`.
