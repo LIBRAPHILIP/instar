@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Instar — a self-molting autonomic governor on GenLayer. It halts, tunes, and rewrites its own rules with no vote."
+    />
+    <meta name="theme-color" content="#050806" />
+    <meta property="og:title" content="Instar · the protocol that molts" />
+    <meta
+      property="og:description"
+      content="Autonomic governor for Agent Tank. Halt, tune, molt — no vote, no owner pause."
+    />
+    <meta property="og:type" content="website" />
+    <title>Instar · the protocol that molts</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Syne:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-stage="egg" data-halted="false">
+    <div class="soil" aria-hidden="true"></div>
+    <div class="glow glow-a" aria-hidden="true"></div>
+    <div class="glow glow-b" aria-hidden="true"></div>
+
+    <header class="mast">
+      <a class="mark" href="#top">
+        <svg class="mark-bug" viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M8 36c10-18 38-18 48 0" fill="none" stroke="currentColor" stroke-width="3" />
+          <circle cx="16" cy="36" r="6" />
+          <circle cx="32" cy="30" r="8" />
+          <circle cx="48" cy="36" r="6" />
+        </svg>
+        <span>
+          <strong>Instar</strong>
+          <em>autonomic protocol · GenLayer</em>
+        </span>
+      </a>
+      <nav>
+        <a href="#organism">Organism</a>
+        <a href="#reflex">Reflex</a>
+        <a href="#body">Hemolymph</a>
+        <a href="#lineage">Lineage</a>
+      </nav>
+      <div class="mast-actions">
+        <label class="net">
+          <span class="dot" id="netDot"></span>
+          <select id="networkSelect" title="GenLayer network">
+            <option value="studionet">Studionet</option>
+            <option value="bradbury">Bradbury</option>
+            <option value="localnet">Localnet</option>
+          </select>
+        </label>
+        <button type="button" class="btn ghost" id="btnEphemeral">Ephemeral</button>
+        <button type="button" class="btn solid" id="btnWallet">Connect</button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <p class="kicker">
+          <span class="live" id="liveBadge"><i></i> Agent Tank · Autonomous Protocols</span>
+          No vote. No owner pause. The genome is the law.
+        </p>
+        <h1>A contract that <em>molts</em>.</h1>
+        <p class="lede">
+          Instar is a living governor. Anyone who can prove an exploit with a public URL trips a
+          reflex. Validators re-fetch the page, agree on a structured action, and Instar either
+          <strong>halts</strong> its body, <strong>tunes</strong> the genome the body must obey, or
+          <strong>rewrites its own constitution</strong>. The hatcher cannot change the rules.
+          Only a molt that survives Optimistic Democracy can.
+        </p>
+        <div class="hero-row">
+          <a class="btn solid" href="#reflex">Trip a reflex</a>
+          <a class="btn ghost" href="#organism">Hatch the organism</a>
+        </div>
+        <ul class="laws">
+          <li>
+            <span>01</span>
+            <div>
+              <strong>Emergency halt</strong>
+              Anyone proves an active exploit. No multisig.
+            </div>
+          </li>
+          <li>
+            <span>02</span>
+            <div>
+              <strong>Contracts govern contracts</strong>
+              Hemolymph cannot draw if Instar says no.
+            </div>
+          </li>
+          <li>
+            <span>03</span>
+            <div>
+              <strong>Policy that reacts</strong>
+              Tightness and draw caps tune themselves from evidence.
+            </div>
+          </li>
+          <li>
+            <span>04</span>
+            <div>
+              <strong>Lifeform</strong>
+              Pulse rewrites the constitution on a loop. No vote.
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="organism" id="organism">
+        <div class="carapace">
+          <div class="carapace-head">
+            <h2>The organism</h2>
+            <span class="stage-pill" id="stagePill">egg</span>
+          </div>
+          <div class="bug-stage" id="bugStage" aria-hidden="true">
+            <svg viewBox="0 0 420 160" class="bug-svg">
+              <defs>
+                <linearGradient id="ichor" x1="0" x2="1">
+                  <stop offset="0" stop-color="#c6f355" />
+                  <stop offset="1" stop-color="#7cffc4" />
+                </linearGradient>
+              </defs>
+              <path class="bug-spine" d="M30 90 C 90 20, 160 20, 210 80 S 330 150, 390 90" />
+              <g class="segs">
+                <circle class="seg s0" cx="70" cy="78" r="16" />
+                <circle class="seg s1" cx="120" cy="62" r="20" />
+                <circle class="seg s2" cx="175" cy="54" r="24" />
+                <circle class="seg s3" cx="235" cy="62" r="22" />
+                <circle class="seg s4" cx="290" cy="78" r="18" />
+                <circle class="seg s5" cx="340" cy="92" r="14" />
+              </g>
+              <circle class="eye" cx="175" cy="54" r="5" />
+            </svg>
+            <p class="bug-caption" id="bugCaption">Unhatched. Deploy Instar to begin the first instar.</p>
+          </div>
+          <dl class="vitals" id="vitals">
+            <div><dt>Paused</dt><dd id="vPaused">—</dd></div>
+            <div><dt>Generation</dt><dd id="vGen">—</dd></div>
+            <div><dt>Max draw</dt><dd id="vDraw">—</dd></div>
+            <div><dt>Tightness</dt><dd id="vTight">—</dd></div>
+            <div><dt>Wounds</dt><dd id="vWounds">—</dd></div>
+            <div><dt>Molts</dt><dd id="vMolts">—</dd></div>
+          </dl>
+        </div>
+
+        <aside class="panel hatch-panel">
+          <div class="panel-head">
+            <h3>Hatch</h3>
+            <span>deploy · bind · no admin leftover</span>
+          </div>
+          <p class="hint">
+            Three transactions: Instar, Hemolymph (the body), then a one-way bind. After that the
+            hatcher cannot pause, unpause, or edit the constitution.
+          </p>
+          <label>
+            Instar
+            <input id="governorAddress" class="mono" placeholder="0x…" spellcheck="false" />
+          </label>
+          <a class="micro" id="govExplorer" href="#" target="_blank" rel="noreferrer">explorer</a>
+          <label>
+            Hemolymph
+            <input id="hemolymphAddress" class="mono" placeholder="0x…" spellcheck="false" />
+          </label>
+          <a class="micro" id="hemoExplorer" href="#" target="_blank" rel="noreferrer">explorer</a>
+          <div class="btn-row">
+            <button type="button" class="btn ghost" id="btnBindSaved">Bind addresses</button>
+            <button type="button" class="btn solid" id="btnHatch">Hatch organism</button>
+          </div>
+          <p class="micro" id="accountLine">not connected</p>
+          <p class="micro" id="rpcLine">probing GenLayer RPC…</p>
+          <p class="micro" id="faucetLine"></p>
+        </aside>
+      </section>
+
+      <section class="split" id="genome">
+        <article class="panel genome-scroll">
+          <div class="panel-head">
+            <h3>Live constitution</h3>
+            <span>the only policy · molt is the only editor</span>
+          </div>
+          <blockquote id="constitutionText">Bind Instar to read the on-chain constitution.</blockquote>
+          <pre class="genome-pre" id="genomePre">genome locked until hatch</pre>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Nervous system</h3>
+            <span>live validator rounds</span>
+          </div>
+          <div class="headline" id="consensusHeadline">
+            <span class="pulse idle" id="consensusPulse"></span>
+            <span id="consensusText">Idle — a reflex wakes the validators</span>
+          </div>
+          <div class="vote-row" id="voteRow">
+            <div class="vote-empty">Votes appear from <code>consensus_data.votes</code></div>
+          </div>
+          <dl class="kv" id="consensusKv"></dl>
+          <div class="log" id="consensusLog">No transactions yet.</div>
+          <div class="btn-row">
+            <a id="txExplorerLink" class="btn ghost" href="#" target="_blank" rel="noreferrer">Open tx</a>
+            <button type="button" class="btn ghost" id="btnAppeal" disabled>Appeal</button>
+            <button type="button" class="btn ghost" id="btnRefresh">Sync chain</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="reflex" id="reflex">
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Trip a reflex</h3>
+            <span>file_threat · anyone · public URL</span>
+          </div>
+          <form id="threatForm">
+            <label>
+              Allegation
+              <textarea
+                id="allegation"
+                required
+                minlength="16"
+                maxlength="1500"
+                placeholder="Name the mechanism. What would drain Hemolymph if this were live?"
+              ></textarea>
+            </label>
+            <label>
+              Evidence URL
+              <input id="evidenceUrl" type="url" placeholder="https://…" spellcheck="false" />
+            </label>
+            <div class="btn-row">
+              <button type="button" class="btn ghost" id="btnSampleHalt">Sample exploit page</button>
+              <button type="button" class="btn ghost" id="btnSampleStand">Sample non-exploit</button>
+              <button type="submit" class="btn solid" id="btnThreat">Submit to validators</button>
+            </div>
+          </form>
+        </div>
+        <div class="panel stack-actions">
+          <div>
+            <div class="panel-head">
+              <h3>Autonomic pulse</h3>
+              <span>lifeform loop · no new URL</span>
+            </div>
+            <p class="hint">
+              Reads stored wounds against the live constitution. May MOLT if the genome failed to
+              name a repeated attack class. Anyone can fire it. Nobody votes.
+            </p>
+            <button type="button" class="btn solid wide" id="btnPulse">Fire pulse</button>
+          </div>
+          <div>
+            <div class="panel-head">
+              <h3>Resume probe</h3>
+              <span>not an admin unpause</span>
+            </div>
+            <form id="resumeForm">
+              <label>
+                Why the hole is closed
+                <textarea id="resumeNote" minlength="16" maxlength="1500" placeholder="Patch, advisory, or post-mortem URL context…"></textarea>
+              </label>
+              <label>
+                Evidence URL
+                <input id="resumeUrl" type="url" placeholder="https://…" spellcheck="false" />
+              </label>
+              <button type="submit" class="btn ghost wide" id="btnResume">Probe resume</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="body-sec" id="body">
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Hemolymph — the body</h3>
+            <span>draws revert if Instar is halted</span>
+          </div>
+          <p class="hint">
+            Deposit GEN. Draw is gated by <code>is_paused</code>, <code>max_draw_bps</code>, and
+            <code>tightness_bps</code>. There is no local override. That is contracts governing
+            contracts.
+          </p>
+          <div class="body-grid">
+            <div>
+              <span class="k">Your credit</span>
+              <strong class="mono" id="creditVal">—</strong>
+            </div>
+            <div>
+              <span class="k">Preview cap</span>
+              <strong class="mono" id="capVal">—</strong>
+            </div>
+            <div>
+              <span class="k">Governor paused</span>
+              <strong id="bodyPaused">—</strong>
+            </div>
+          </div>
+          <div class="btn-row wrap">
+            <label class="inline-field">
+              Deposit wei
+              <input id="depositWei" class="mono" value="1000000000000000" />
+            </label>
+            <button type="button" class="btn solid" id="btnDeposit">Deposit</button>
+            <label class="inline-field">
+              Draw wei
+              <input id="drawWei" class="mono" value="100000000000000" />
+            </label>
+            <button type="button" class="btn ghost" id="btnPreview">Preview</button>
+            <button type="button" class="btn ichor" id="btnDraw">Draw</button>
+          </div>
+          <p class="micro" id="bodyNote">Bind Hemolymph to move value under Instar’s genome.</p>
+        </div>
+      </section>
+
+      <section class="lineage" id="lineage">
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Wound log</h3>
+            <span>get_lineage · on-chain</span>
+          </div>
+          <div class="log-list" id="lineageList">
+            <div class="empty">No wounds yet. A reflex writes the first scar.</div>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-head">
+            <h3>Molt skins</h3>
+            <span>previous constitutions, kept</span>
+          </div>
+          <div class="log-list" id="moltList">
+            <div class="empty">Egg still wears its hatch constitution.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="split" id="source">
+        <article class="panel">
+          <div class="panel-head">
+            <h3>On-chain source</h3>
+            <span>what validators execute</span>
+          </div>
+          <p class="hint">
+            The UI never judges. It only calls <code>writeContract</code>. Paste these files into
+            Studio if you want to hatch outside the app.
+          </p>
+          <details>
+            <summary>instar.py</summary>
+            <pre class="genome-pre" id="instarSrc"></pre>
+          </details>
+          <details>
+            <summary>hemolymph.py</summary>
+            <pre class="genome-pre" id="hemoSrc"></pre>
+          </details>
+        </article>
+        <article class="panel">
+          <div class="panel-head">
+            <h3>Tank rules we hit</h3>
+            <span>Autonomous Protocols</span>
+          </div>
+          <ul class="rule-list">
+            <li><strong>Emergency halt.</strong> Anyone with a public exploit URL. No multisig.</li>
+            <li><strong>Policy that reacts.</strong> Tightness and draw caps tune from evidence.</li>
+            <li><strong>Contracts govern contracts.</strong> Hemolymph has no local pause.</li>
+            <li><strong>Lifeform.</strong> Pulse rewrites the constitution. Hatcher cannot.</li>
+            <li><strong>One build.</strong> This repo is the application.</li>
+            <li><strong>No vote.</strong> Optimistic Democracy is the only committee.</li>
+          </ul>
+        </article>
+      </section>
+
+      <footer>
+        <div>
+          Built for
+          <a href="https://portal.genlayer.foundation/agent-tank/hackathon" target="_blank" rel="noreferrer"
+            >Agent Tank</a
+          >
+          · Autonomous Protocols ·
+          <a href="https://github.com/LIBRAPHILIP/instar" target="_blank" rel="noreferrer">GitHub</a>
+          ·
+          <a href="https://docs.genlayer.com/" target="_blank" rel="noreferrer">GenLayer</a>
+        </div>
+        <div class="seal">Halt · tune · molt · never vote</div>
+      </footer>
+    </main>
+
+    <div class="toast" id="toast" role="status"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
